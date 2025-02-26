@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Londrina_Shadow, Unbounded } from "next/font/google";
 import "./globals.css";
+import { MenuNav } from "@/ui/menu-nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +10,17 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const londrina_Shadow = Londrina_Shadow({
+  variable: "--font-londrina_shadow",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
   subsets: ["latin"],
 });
 
@@ -24,7 +36,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${londrina_Shadow.variable} ${unbounded.variable}`}>
+        <MenuNav/>
         {children}
       </body>
     </html>

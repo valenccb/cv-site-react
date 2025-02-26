@@ -5,45 +5,24 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={styles.aboutContainer}>
+          <div className={styles.imgContainer}>
+            <div className={styles.imgWrapper}>
+              <Image fill={true} alt="Carlos" src="/headshots/Carlos.png" />
+            </div>
+          </div>
+          <div className={styles.textContainer}>
+            <span className={styles.helloText}
+              >Hi, I'm<br />
+              Carlos!</span
+            >
+            <span className={styles.aboutText}>
+              Also known as a Front-End/Back-End developer with 10+ years of
+              experience in designing, building and testing web applications. Eager to
+              learn, not afraid to ask questions and a firm believer of the fact that
+              there’s always more to discover.
+            </span>
+          </div>
         </div>
       </main>
       <footer className={styles.footer}>

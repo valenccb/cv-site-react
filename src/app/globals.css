@@ -1,12 +1,12 @@
 :root {
-  --background: #ffffff;
+  --background: #dee7d2;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #dee7d2;
   }
 }
 
@@ -35,8 +35,21 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+.menu-icons {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  margin-left: 20px;
+  vertical-align: center;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
